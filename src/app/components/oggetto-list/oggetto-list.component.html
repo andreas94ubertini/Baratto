@@ -1,0 +1,15 @@
+<h2 class="text-center">Lista degli Oggetti</h2>
+<div class="row">
+  <div class="col">
+    <div class="card" *ngFor="let o of elencoOggetti">
+      <div class="card-header">
+        <p>Codice Identificativo: {{o.Codice}}</p>
+      </div>
+      <div class="card-body">
+        <p>Nome: {{o.Nome}}</p>
+        <p>Propietario: {{o.Propietario?.nominativo}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>

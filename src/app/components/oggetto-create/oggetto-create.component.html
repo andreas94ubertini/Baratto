@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col">
+    <h2 class="text-center">Inserisci Oggetto</h2>
+    <div class="form-group">
+      <label for="input-nome">Nome Oggetto</label>
+      <input [(ngModel)]="Nome" type="text" class="form-control" id="input-nome">
+    </div>
+    <div class="form-group">
+      <label for="input-codice">Codice</label>
+      <input [(ngModel)]="Codice" type="text" class="form-control" id="input-codice">
+    </div>
+    <div class="form-group">
+      <select class="form-control" [(ngModel)]="PropietarioCod">
+        <option value="N.D">Seleziona Persona</option>
+        <option *ngFor="let p of elencoPers" value="{{p.codice}}">{{p.nominativo}}</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="createObj()">Inserisci</button>
+  </div>
+</div>
